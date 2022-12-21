@@ -5,12 +5,19 @@ namespace Bakery.Models
   public class Order
   {
     public string Description { get; set; }
+    public string BreadCount { get; set; }
+    public string PastryCount { get; set; }
+    public string Date { get; set; }
+    public int Price { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> { };
 
-    public Order(string description)
+    public Order(string description, string breadCount, string pastryCount, string date)
     {
       Description = description;
+      BreadCount = breadCount;
+      PastryCount = pastryCount;
+      Date = date;
       _instances.Add(this);
       Id = _instances.Count;
     }
