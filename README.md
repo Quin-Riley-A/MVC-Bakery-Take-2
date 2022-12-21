@@ -11,6 +11,7 @@ Quin Asselin, December 2022
 1. [Repository Description](#repository-description)
 2. [Technologies Used](#technologies-used)
 3. [Setup Instructions](#setup-installation-requirements)
+4. [Known Bugs](#known-bugs)
 5. [License Information](#license)
 
 ## Repository Description:
@@ -37,6 +38,9 @@ This project was hand-built in tandem with a programming class taught by Epicodu
 2. Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory called "ToDoList". 
 3. Run `dotnet watch run` in the command line to start the project in development mode with a watcher.
 4. Open the browser to _https://localhost:5001_. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
+
+## Known Bugs
+This repository may encounter issues with some form inputs being in incorrect formats and thus being inproperly handled by the underlying methods. Additionally, the form may look unusual under certain smaller screen dimensions.
 
 ## License
 *Quin Asselin, 2022. Available for distribution, modification, inspection, and application under [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)*
