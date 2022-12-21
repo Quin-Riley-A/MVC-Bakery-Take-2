@@ -20,6 +20,7 @@ namespace Bakery.Models
       Date = date;
       _instances.Add(this);
       Id = _instances.Count;
+      Price = Order.OrderPrice(breadCount, pastryCount);
     }
 
     public static List<Order> GetAll()
@@ -34,6 +35,14 @@ namespace Bakery.Models
     public static Order Find(int searchId)
     {
       return _instances[searchId-1];
+    }
+    public static int OrderPrice(string breadCount, string pastryCount)
+    {
+      int intBreadCount = int.Parse(breadCount);
+      int intPastryCount = int.Parse(pastryCount);
+      int breadPrice = ((intBreadCount/3) * 10) + (intBreadCount%3)*5;
+      int pastryPrice = ((intPastryCount/3) * 5) + (intPastryCount%3)*2;
+      return (breadPrice + pastryPrice);
     }
   }
 }
