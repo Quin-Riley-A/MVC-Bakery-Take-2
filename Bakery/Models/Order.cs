@@ -12,7 +12,7 @@ namespace Bakery.Models
     public int Id { get; }
     private static List<Order> _instances = new List<Order> { };
 
-    public Order(string description, string breadCount, string pastryCount, string date)
+    public Order(string description = "", string breadCount = "0", string pastryCount = "0", string date = "1/1/1970")
     {
       Description = description;
       BreadCount = breadCount;
